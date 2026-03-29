@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Aari & Zardoshi Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C9A84C;--gold-light:#E8C96A;--gold-pale:#F5E9C8;--deep:#110800;--maroon:#6B1A2A;--burgundy:#8B2035;--cream:#FAF6EE;--silk:#F0E8D8;--text:#1E1008;--muted:#7A6050;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--cream);color:var(--text);font-family:'Jost',sans-serif;overflow-x:hidden;}
+
+/* NAV — same as courses */
+nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(17,8,0,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,168,76,0.2);height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;}
+.nav-logo{font-family:'Cinzel',serif;color:var(--gold);font-size:1.1rem;letter-spacing:0.18em;text-decoration:none;display:flex;align-items:center;gap:0.6rem;}
+.nav-logo span{color:rgba(201,168,76,0.4);font-size:0.7rem;}
+.nav-links{display:flex;gap:0;list-style:none;}
+.nav-links a{color:rgba(245,233,200,0.65);text-decoration:none;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:0 1.2rem;height:70px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all 0.3s;}
+.nav-links a:hover{color:var(--gold-light);}
+.nav-links a.active{color:var(--gold);border-bottom-color:var(--gold);}
+.nav-enroll{background:var(--gold);color:var(--deep)!important;padding:0.5rem 1.4rem!important;height:auto!important;border:none!important;font-weight:500!important;}
+.nav-enroll:hover{background:var(--gold-light)!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:0;}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--gold);}
+
+/* PAGE HERO — dark with embroidery pattern */
+.about-hero{min-height:75vh;background:var(--deep);display:flex;align-items:center;position:relative;overflow:hidden;padding:8rem 3rem 5rem;}
+.hero-bg-pattern{position:absolute;inset:0;opacity:0.04;}
+.hero-bg-pattern circle, .hero-bg-pattern path, .hero-bg-pattern line{stroke:var(--gold);}
+.about-hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 40% 60%,rgba(107,26,42,0.45) 0%,transparent 65%),radial-gradient(ellipse at 85% 25%,rgba(201,168,76,0.12) 0%,transparent 55%);}
+.hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
+.hero-left .eyebrow{font-family:'Cinzel',serif;font-size:0.68rem;letter-spacing:0.3em;color:rgba(201,168,76,0.6);margin-bottom:1rem;}
+.hero-left h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5.5vw,4.8rem);font-weight:300;color:var(--cream);line-height:1.1;}
+.hero-left h1 em{font-style:italic;color:var(--gold-light);}
+.gold-rule{width:55px;height:2px;background:var(--gold);margin:1.5rem 0;}
+.hero-left p{font-size:1rem;color:rgba(245,233,200,0.6);line-height:1.9;margin-bottom:2rem;}
+.hero-btn{display:inline-block;background:var(--gold);color:var(--deep);padding:0.85rem 2rem;font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.12em;text-decoration:none;transition:all 0.3s;}
+.hero-btn:hover{background:var(--gold-light);transform:translateY(-2px);}
+.hero-right{position:relative;}
+.hero-portrait{width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,#3A1A28 0%,#1A0A00 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.portrait-motif{width:72%;opacity:0.5;}
+.portrait-accent{position:absolute;bottom:-1.5rem;right:-1.5rem;width:55%;aspect-ratio:1;border:1.5px solid rgba(201,168,76,0.3);z-index:-1;}
+.portrait-tag{position:absolute;bottom:2rem;left:2rem;background:rgba(17,8,0,0.85);padding:1rem 1.5rem;border-left:2px solid var(--gold);}
+.portrait-tag .t1{font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.15em;color:var(--gold);}
+.portrait-tag .t2{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--cream);}
+
+/* STATS BAND */
+.stats-band{background:var(--maroon);padding:3rem;}
+.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;}
+.stat-item{text-align:center;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--gold);line-height:1;}
+.stat-label{font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(245,233,200,0.6);margin-top:0.4rem;}
+
+/* STORY SECTION */
+.story{padding:7rem 3rem;background:var(--cream);}
+.story-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
+.eyebrow{font-family:'Cinzel',serif;font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;line-height:1.2;color:var(--deep);}
+.section-title em{font-style:italic;color:var(--burgundy);}
+.rule{width:50px;height:2px;background:var(--gold);margin:1.2rem 0 2rem;}
+.story-text p{color:var(--muted);line-height:1.9;font-size:0.95rem;margin-bottom:1.3rem;}
+.story-text strong{color:var(--text);}
+.story-visual{position:relative;}
+.story-mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:1rem;}
+.mosaic-main{grid-column:1/3;aspect-ratio:16/9;background:linear-gradient(135deg,var(--deep) 0%,var(--maroon) 100%);display:flex;align-items:center;justify-content:center;}
+.mosaic-sm{aspect-ratio:1;display:flex;align-items:center;justify-content:center;}
+.mosaic-sm:nth-child(2){background:linear-gradient(135deg,#6B1A2A,#3A0A00);}
+.mosaic-sm:nth-child(3){background:linear-gradient(135deg,#1A2A4A,#0A0A2A);}
+.mosaic-icon{font-size:2.5rem;opacity:0.6;}
+.mosaic-icon-lg{font-size:3.5rem;opacity:0.5;}
+.quote-block{background:var(--deep);padding:2rem;margin-top:2rem;position:relative;}
+.quote-block::before{content:'"';font-family:'Cormorant Garamond',serif;font-size:5rem;color:var(--gold);opacity:0.2;position:absolute;top:0.5rem;left:1rem;line-height:1;}
+.quote-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--cream);line-height:1.7;margin-bottom:0.8rem;padding-left:1rem;}
+.quote-attr{font-size:0.75rem;color:rgba(201,168,76,0.6);letter-spacing:0.1em;padding-left:1rem;}
+
+/* CRAFT SECTION */
+.crafts{background:var(--silk);padding:7rem 3rem;}
+.crafts-inner{max-width:1200px;margin:0 auto;}
+.crafts-head{text-align:center;margin-bottom:4rem;}
+.crafts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2rem;}
+.craft-card{background:white;padding:2.5rem 2rem;border:1px solid rgba(201,168,76,0.12);transition:all 0.4s;}
+.craft-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(17,8,0,0.09);border-color:rgba(201,168,76,0.3);}
+.craft-icon-wrap{width:64px;height:64px;background:linear-gradient(135deg,var(--deep),var(--maroon));display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin-bottom:1.5rem;}
+.craft-card h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--deep);margin-bottom:0.6rem;}
+.craft-card p{font-size:0.85rem;color:var(--muted);line-height:1.8;}
+
+/* VALUES */
+.values{padding:7rem 3rem;background:var(--cream);}
+.values-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:start;}
+.values-list{display:flex;flex-direction:column;gap:2rem;margin-top:1rem;}
+.value-item{display:flex;gap:1.5rem;align-items:flex-start;}
+.v-num{font-family:'Cinzel',serif;font-size:0.75rem;color:var(--gold);letter-spacing:0.2em;padding-top:0.2rem;flex-shrink:0;}
+.v-text h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--deep);margin-bottom:0.4rem;}
+.v-text p{font-size:0.85rem;color:var(--muted);line-height:1.8;}
+
+/* TEAM */
+.team{background:var(--deep);padding:7rem 3rem;}
+.team-inner{max-width:1200px;margin:0 auto;}
+.team-head{margin-bottom:4rem;}
+.team-head .section-title{color:var(--cream);}
+.team-head em{color:var(--gold-light)!important;}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:2rem;}
+.team-card{text-align:center;}
+.team-avatar{width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,var(--maroon),var(--deep));margin:0 auto 1.2rem;display:flex;align-items:center;justify-content:center;font-size:3rem;border:2px solid rgba(201,168,76,0.2);}
+.team-card h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--cream);margin-bottom:0.3rem;}
+.team-card .role{font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+.team-card p{font-size:0.83rem;color:rgba(245,233,200,0.45);line-height:1.8;}
+
+/* CTA BANNER */
+.cta-band{background:linear-gradient(110deg,var(--maroon) 0%,var(--deep) 60%);padding:5rem 3rem;text-align:center;position:relative;overflow:hidden;}
+.cta-band::before{content:'✦';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:40rem;color:rgba(201,168,76,0.03);line-height:1;pointer-events:none;}
+.cta-band h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;color:var(--cream);margin-bottom:1rem;position:relative;}
+.cta-band p{color:rgba(245,233,200,0.55);margin-bottom:2.5rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.8;position:relative;}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;}
+.btn-gold{display:inline-block;background:var(--gold);color:var(--deep);padding:0.9rem 2.2rem;font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.12em;text-decoration:none;transition:all 0.3s;}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);}
+.btn-outline-gold{display:inline-block;border:1px solid rgba(201,168,76,0.4);color:var(--gold-light);padding:0.9rem 2.2rem;font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.12em;text-decoration:none;transition:all 0.3s;}
+.btn-outline-gold:hover{border-color:var(--gold);background:rgba(201,168,76,0.08);}
+
+/* FOOTER */
+footer{background:#0A0400;border-top:1px solid rgba(201,168,76,0.1);padding:4rem 3rem 2rem;}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
+.f-logo{font-family:'Cinzel',serif;font-size:1.2rem;color:var(--gold);letter-spacing:0.12em;display:block;margin-bottom:0.8rem;}
+.f-desc{font-size:0.82rem;color:rgba(245,233,200,0.3);line-height:1.9;}
+.f-socials{display:flex;gap:0.7rem;margin-top:1.3rem;}
+.f-soc{width:34px;height:34px;border:1px solid rgba(201,168,76,0.2);display:flex;align-items:center;justify-content:center;color:rgba(201,168,76,0.6);font-size:0.75rem;text-decoration:none;transition:all 0.3s;}
+.f-soc:hover{border-color:var(--gold);color:var(--gold);}
+.f-col h4{font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.2em;color:var(--gold);margin-bottom:1rem;}
+.f-col ul{list-style:none;}
+.f-col li{margin-bottom:0.5rem;}
+.f-col a{font-size:0.82rem;color:rgba(245,233,200,0.35);text-decoration:none;transition:color 0.3s;}
+.f-col a:hover{color:var(--gold-light);}
+.f-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(201,168,76,0.08);display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;font-size:0.75rem;color:rgba(245,233,200,0.2);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:900px){
+  nav{padding:0 1.5rem;}
+  .nav-links{display:none;position:absolute;top:70px;left:0;width:100%;background:rgba(17,8,0,0.98);flex-direction:column;padding:1rem 0;}
+  .nav-links.open{display:flex;}
+  .nav-links a{height:auto;padding:0.9rem 2rem;border:none;border-left:2px solid transparent;}
+  .nav-links a.active{border-left-color:var(--gold);}
+  .hamburger{display:flex;}
+  .hero-inner{grid-template-columns:1fr;gap:3rem;}
+  .hero-right{display:none;}
+  .about-hero{min-height:auto;}
+  .stats-inner{grid-template-columns:repeat(2,1fr);}
+  .story-inner, .values-inner{grid-template-columns:1fr;gap:3rem;}
+  .story, .crafts, .values, .team, .cta-band{padding:5rem 1.5rem;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:600px){
+  .stats-inner{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">✦ <span>Aari &</span> Zardoshi</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html#enroll" class="nav-enroll">Enroll Now</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="about-hero">
+  <svg class="hero-bg-pattern" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%">
+    <circle cx="600" cy="350" r="300" fill="none" stroke="#C9A84C" stroke-width="0.5"/>
+    <circle cx="600" cy="350" r="200" fill="none" stroke="#C9A84C" stroke-width="0.5"/>
+    <circle cx="600" cy="350" r="100" fill="none" stroke="#C9A84C" stroke-width="0.5"/>
+    <line x1="0" y1="350" x2="1200" y2="350" stroke="#C9A84C" stroke-width="0.4"/>
+    <line x1="600" y1="0" x2="600" y2="700" stroke="#C9A84C" stroke-width="0.4"/>
+    <line x1="180" y1="30" x2="1020" y2="670" stroke="#C9A84C" stroke-width="0.3"/>
+    <line x1="1020" y1="30" x2="180" y2="670" stroke="#C9A84C" stroke-width="0.3"/>
+    <circle cx="600" cy="50" r="5" fill="#C9A84C" opacity="0.4"/>
+    <circle cx="600" cy="650" r="5" fill="#C9A84C" opacity="0.4"/>
+    <circle cx="50" cy="350" r="5" fill="#C9A84C" opacity="0.4"/>
+    <circle cx="1150" cy="350" r="5" fill="#C9A84C" opacity="0.4"/>
+    <path d="M 600 50 Q 900 350 600 650 Q 300 350 600 50" fill="none" stroke="#C9A84C" stroke-width="0.5"/>
+    <path d="M 50 350 Q 600 50 1150 350 Q 600 650 50 350" fill="none" stroke="#C9A84C" stroke-width="0.5"/>
+  </svg>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="eyebrow">Our Story & Heritage</p>
+      <h1>Weaving <em>Traditions</em><br>into the Future</h1>
+      <div class="gold-rule"></div>
+      <p>We are a passionate embroidery academy dedicated to preserving the timeless arts of Aari and Zardoshi — ancient Indian textile crafts of extraordinary delicacy and beauty. Our mission is to keep these traditions alive and equip modern learners with skills that are both artistically fulfilling and professionally valuable.</p>
+      <a href="#story" class="hero-btn">Read Our Story ↓</a>
+    </div>
+    <div class="hero-right">
+      <div class="hero-portrait">
+        <svg class="portrait-motif" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path d="M100 10 Q160 55 180 100 Q160 145 100 190 Q40 145 20 100 Q40 55 100 10Z" stroke="#C9A84C" stroke-width="1.5"/>
+          <path d="M100 30 Q148 65 163 100 Q148 135 100 170 Q52 135 37 100 Q52 65 100 30Z" stroke="#C9A84C" stroke-width="1"/>
+          <path d="M100 50 Q136 75 146 100 Q136 125 100 150 Q64 125 54 100 Q64 75 100 50Z" stroke="#C9A84C" stroke-width="1"/>
+          <circle cx="100" cy="100" r="18" stroke="#C9A84C" stroke-width="1.5" fill="rgba(201,168,76,0.1)"/>
+          <line x1="100" y1="10" x2="100" y2="190" stroke="#C9A84C" stroke-width="0.5"/>
+          <line x1="20" y1="100" x2="180" y2="100" stroke="#C9A84C" stroke-width="0.5"/>
+          <circle cx="100" cy="10" r="4" fill="#C9A84C"/><circle cx="100" cy="190" r="4" fill="#C9A84C"/>
+          <circle cx="20" cy="100" r="4" fill="#C9A84C"/><circle cx="180" cy="100" r="4" fill="#C9A84C"/>
+        </svg>
+        <div class="portrait-tag">
+          <div class="t1">Est. 2016</div>
+          <div class="t2">Aari & Zardoshi Academy</div>
+        </div>
+      </div>
+      <div class="portrait-accent"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Students Trained</div></div>
+    <div class="stat-item"><div class="stat-num">12+</div><div class="stat-label">Course Varieties</div></div>
+    <div class="stat-item"><div class="stat-num">8 Yrs</div><div class="stat-label">Of Excellence</div></div>
+    <div class="stat-item"><div class="stat-num">98%</div><div class="stat-label">Student Satisfaction</div></div>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="story-inner">
+    <div class="story-text">
+      <p class="eyebrow">Our Journey</p>
+      <h2 class="section-title">From a Single Needle<br><em>to a Thriving Academy</em></h2>
+      <div class="rule"></div>
+      <p>Our academy was founded in 2016 by a master embroiderer with over two decades of experience in Aari and Zardoshi — India's most celebrated hand embroidery arts. What began as small workshops in a home studio has grown into a full-fledged online and offline academy serving students across India and abroad.</p>
+      <p>We believe that <strong>every stitch tells a story</strong>. Aari work, with its fine crochet-hook needle and intricate thread patterns, and Zardoshi, with its dazzling gold and silver thread embellishments, are both living inheritances from centuries of Indian craftsmanship.</p>
+      <p>Our goal has always been twofold: to <strong>preserve these arts</strong> for future generations, and to give students the skills to build real, sustainable livelihoods from them — whether as boutique designers, home-based artisans, teachers, or studio entrepreneurs.</p>
+      <p>Today, our graduates work for bridal couture houses, run their own labels, teach embroidery, and sell handcrafted products worldwide. Their success is our greatest achievement.</p>
+    </div>
+    <div class="story-visual">
+      <div class="story-mosaic">
+        <div class="mosaic-main"><span class="mosaic-icon-lg">🪡</span></div>
+        <div class="mosaic-sm"><span class="mosaic-icon">✨</span></div>
+        <div class="mosaic-sm"><span class="mosaic-icon">📿</span></div>
+      </div>
+      <div class="quote-block">
+        <p class="quote-text">Embroidery is not just craft — it is a meditation, a language, and a legacy passed from hand to hand.</p>
+        <p class="quote-attr">— Founder, Aari & Zardoshi Academy</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CRAFTS WE TEACH -->
+<section class="crafts">
+  <div class="crafts-inner">
+    <div class="crafts-head">
+      <p class="eyebrow">What We Specialize In</p>
+      <h2 class="section-title">The <em>Arts We Teach</em></h2>
+      <div class="rule" style="margin:1.2rem auto;"></div>
+    </div>
+    <div class="crafts-grid">
+      <div class="craft-card">
+        <div class="craft-icon-wrap">🪡</div>
+        <h3>Aari Embroidery</h3>
+        <p>A distinctive Indian technique using a hooked needle (aari) to create intricate chain stitches, filling patterns, and delicate motifs on fabric stretched over a frame. Widely used in bridal wear, dupattas, and home furnishings.</p>
+      </div>
+      <div class="craft-card">
+        <div class="craft-icon-wrap">✨</div>
+        <h3>Zardoshi Work</h3>
+        <p>An ancient goldwork embroidery using real or synthetic gold and silver threads, sequins, beads, and wires. Zardoshi adorns India's finest lehengas, sarees, sherwanis, and couture garments with opulent metallic brilliance.</p>
+      </div>
+      <div class="craft-card">
+        <div class="craft-icon-wrap">📿</div>
+        <h3>Embroidery Jewellery</h3>
+        <p>A modern fusion craft — applying Aari techniques to create wearable jewellery pieces including earrings, necklaces, maang tikkas, and bracelets. A rapidly growing niche with excellent commercial potential.</p>
+      </div>
+      <div class="craft-card">
+        <div class="craft-icon-wrap">🎨</div>
+        <h3>Design & Digital</h3>
+        <p>Modern embroidery professionals need digital skills too. We teach Canva for marketing, Procreate for pattern design, and traditional sketching — bridging ancient craft with contemporary business needs.</p>
+      </div>
+      <div class="craft-card">
+        <div class="craft-icon-wrap">📐</div>
+        <h3>Pattern Sheets & Books</h3>
+        <p>Learn to create professional design sheets, pattern libraries, and client presentation books — essential tools for running a successful embroidery studio or teaching practice.</p>
+      </div>
+      <div class="craft-card">
+        <div class="craft-icon-wrap">✏️</div>
+        <h3>Sketching & Training</h3>
+        <p>The foundation of all great embroidery design is a confident hand sketch. Our sketching classes develop motif-drawing ability, proportion sense, repeat-pattern skills, and fabric transfer techniques.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="values-inner">
+    <div>
+      <p class="eyebrow">What Drives Us</p>
+      <h2 class="section-title">Our <em>Values</em></h2>
+      <div class="rule"></div>
+      <p style="font-size:0.9rem;color:var(--muted);line-height:1.9;">Everything we do at Aari & Zardoshi Academy is guided by these core principles.</p>
+    </div>
+    <div class="values-list">
+      <div class="value-item">
+        <div class="v-num">01</div>
+        <div class="v-text">
+          <h4>Tradition with Purpose</h4>
+          <p>We honour the centuries-old methods of Aari and Zardoshi while making them relevant to today's learner. Every technique we teach has both cultural depth and practical application.</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="v-num">02</div>
+        <div class="v-text">
+          <h4>Accessible Excellence</h4>
+          <p>World-class embroidery education should not be limited by geography or schedule. Our recorded and live course formats ensure any motivated learner can access expert instruction.</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="v-num">03</div>
+        <div class="v-text">
+          <h4>Career-Ready Skills</h4>
+          <p>We do not just teach craft — we teach business. From professional-level production to digital design and client presentation, our curriculum prepares students to earn from their art.</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="v-num">04</div>
+        <div class="v-text">
+          <h4>Warm, Supportive Community</h4>
+          <p>Every student joins a WhatsApp community of fellow learners and graduates. We believe learning embroidery is best done together — sharing inspiration, asking questions, and celebrating progress.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team">
+  <div class="team-inner">
+    <div class="team-head">
+      <p class="eyebrow" style="color:rgba(201,168,76,0.6)">The People Behind the Needles</p>
+      <h2 class="section-title">Meet Our <em>Team</em></h2>
+      <div class="rule"></div>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">👩‍🎨</div>
+        <h3>[Founder Name]</h3>
+        <div class="role">Founder & Master Instructor</div>
+        <p>20+ years in Aari and Zardoshi embroidery. Trained artisans for top Indian couture houses before founding the academy in 2016.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">🎓</div>
+        <h3>[Instructor Name]</h3>
+        <div class="role">Senior Aari Instructor</div>
+        <p>Specialises in advanced Aari motifs and bridal work. Graduate of our Professional programme — now giving back as a lead instructor.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">✨</div>
+        <h3>[Instructor Name]</h3>
+        <div class="role">Zardoshi Specialist</div>
+        <p>Expert in Kalabattu, Mukaish, and Badla techniques. Has contributed to lehenga collections for leading Indian bridal designers.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">🎨</div>
+        <h3>[Instructor Name]</h3>
+        <div class="role">Design & Digital Instructor</div>
+        <p>Teaches Canva, Procreate, and pattern sketching. Bridges traditional craft with modern digital workflows for today's embroidery entrepreneur.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>Ready to Begin Your<br>Embroidery Journey?</h2>
+  <p>Browse our full catalogue of courses and find the right starting point — whether you are a complete beginner or ready to go professional.</p>
+  <div class="cta-btns">
+    <a href="courses.html" class="btn-gold">View All Courses</a>
+    <a href="contact.html" class="btn-outline-gold">Get in Touch</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <span class="f-logo">✦ Aari & Zardoshi</span>
+      <p class="f-desc">Preserving India's most treasured textile arts through world-class education. Join hundreds of students who have mastered hand embroidery with us.</p>
+      <div class="f-socials">
+        <a href="#" class="f-soc">f</a><a href="#" class="f-soc">in</a>
+        <a href="#" class="f-soc">yt</a><a href="#" class="f-soc">w</a>
+      </div>
+    </div>
+    <div class="f-col"><h4>Quick Links</h4><ul>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li><a href="courses.html">Courses</a></li><li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="f-col"><h4>Courses</h4><ul>
+      <li><a href="courses.html">Aari Basic</a></li><li><a href="courses.html">Aari Advanced</a></li>
+      <li><a href="courses.html">Zardoshi Basic</a></li><li><a href="courses.html">Jewellery Making</a></li>
+      <li><a href="courses.html">Canva Designing</a></li>
+    </ul></div>
+    <div class="f-col"><h4>Contact</h4><ul>
+      <li><a href="tel:+91XXXXXXXXXX">📞 +91 XXXXX XXXXX</a></li>
+      <li><a href="mailto:info@aarizardoshi.in">✉ info@aarizardoshi.in</a></li>
+      <li><a href="#">💬 WhatsApp Us</a></li>
+      <li><a href="#">📍 [Your City], India</a></li>
+    </ul></div>
+  </div>
+  <div class="f-bottom">
+    <span>© 2025 Aari & Zardoshi Academy. All rights reserved.</span>
+    <span>Crafted with ✦ dedication</span>
+  </div>
+</footer>
+
+<script>function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}</script>
+</body>
+</html>
