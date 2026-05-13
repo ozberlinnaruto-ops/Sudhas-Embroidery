@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses — Sudha's Embroidery Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#C9626A;--rose-light:#E8939A;--rose-pale:#FAE8EA;--gold:#B8860B;--gold-light:#D4A017;--gold-pale:#FDF5DC;--blush:#F9EEE8;--warm-white:#FFFAF7;--silk:#F4EDE4;--text:#2C1810;--muted:#7A5C52;--light-muted:#B09890;--border:rgba(180,120,100,0.18);}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--warm-white);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden;}
+nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(255,250,247,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;}
+.nav-logo{font-family:'Playfair Display',serif;color:var(--rose);font-size:1.25rem;letter-spacing:0.02em;text-decoration:none;display:flex;align-items:center;gap:0.5rem;}
+.nav-logo small{font-family:'DM Sans',sans-serif;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);font-weight:400;}
+.nav-links{display:flex;gap:0;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.8rem;letter-spacing:0.06em;padding:0 1.1rem;height:68px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all 0.3s;}
+.nav-links a:hover{color:var(--rose);}
+.nav-links a.active{color:var(--rose);border-bottom-color:var(--rose);}
+.nav-cta{background:var(--rose)!important;color:white!important;padding:0.5rem 1.4rem!important;height:auto!important;border-radius:2px;font-weight:500!important;border:none!important;}
+.nav-cta:hover{background:var(--rose-light)!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:0;}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--rose);}
+
+.page-hero{padding:8rem 3rem 5rem;background:linear-gradient(135deg,#FFF5F0 0%,#FAE8EA 50%,#FDF5DC 100%);position:relative;overflow:hidden;}
+.page-hero::after{content:'🌸';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-size:18rem;opacity:0.06;}
+.breadcrumb{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--light-muted);margin-bottom:1rem;}
+.breadcrumb a{color:var(--light-muted);text-decoration:none;}
+.breadcrumb a:hover{color:var(--rose);}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:700;color:var(--text);margin-bottom:0.5rem;}
+.page-hero h1 em{font-style:italic;color:var(--rose);}
+.page-hero p{color:var(--muted);font-size:1rem;max-width:520px;line-height:1.8;margin-top:1rem;}
+.hero-rule{width:50px;height:2.5px;background:linear-gradient(to right,var(--rose),var(--gold));margin:1.2rem 0;border-radius:2px;}
+
+.filter-bar{background:white;border-bottom:1px solid var(--border);position:sticky;top:68px;z-index:900;padding:0 3rem;}
+.filter-inner{max-width:1200px;margin:0 auto;display:flex;gap:0;overflow-x:auto;scrollbar-width:none;}
+.filter-inner::-webkit-scrollbar{display:none;}
+.filter-btn{padding:1rem 1.4rem;background:none;border:none;cursor:pointer;font-size:0.78rem;font-weight:500;color:var(--muted);white-space:nowrap;border-bottom:2px solid transparent;transition:all 0.3s;}
+.filter-btn:hover{color:var(--text);}
+.filter-btn.active{color:var(--rose);border-bottom-color:var(--rose);}
+
+.courses-main{max-width:1200px;margin:0 auto;padding:4rem 3rem 6rem;}
+.eyebrow{font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--rose);margin-bottom:0.5rem;font-weight:500;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:700;color:var(--text);}
+.section-title em{font-style:italic;color:var(--rose);}
+.rule{width:40px;height:2.5px;background:linear-gradient(to right,var(--rose),var(--gold));margin:1rem 0 2rem;border-radius:2px;}
+
+/* OFFER BANNER */
+.offer-banner{background:linear-gradient(120deg,#FEE2E2 0%,#FDE8F0 100%);border:1.5px solid rgba(201,98,106,0.25);border-radius:12px;padding:2rem 2.5rem;margin-bottom:3rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
+.ob-tag{background:var(--rose);color:white;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;padding:0.3rem 0.8rem;border-radius:20px;margin-bottom:0.6rem;display:inline-block;}
+.offer-banner h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--text);margin-bottom:0.4rem;}
+.offer-banner p{font-size:0.87rem;color:var(--muted);line-height:1.7;}
+.ob-price{text-align:center;flex-shrink:0;}
+.ob-orig{font-size:0.9rem;color:var(--light-muted);text-decoration:line-through;}
+.ob-main{font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;color:var(--rose);line-height:1;}
+.ob-save{font-size:0.75rem;color:#16a34a;font-weight:600;margin-bottom:1rem;}
+.btn-primary{display:inline-block;background:var(--rose);color:white;padding:0.85rem 2rem;font-size:0.82rem;font-weight:500;text-decoration:none;border-radius:4px;transition:all 0.3s;border:none;cursor:pointer;}
+.btn-primary:hover{background:var(--rose-light);transform:translateY(-2px);}
+
+.cat-header{display:flex;align-items:center;gap:1.5rem;margin:3rem 0 1.5rem;}
+.cat-header h2{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--text);white-space:nowrap;}
+.cat-line{flex:1;height:1px;background:linear-gradient(to right,var(--border),transparent);}
+
+.courses-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2rem;}
+.course-card{background:white;border-radius:12px;overflow:hidden;border:1px solid var(--border);transition:all 0.4s;cursor:pointer;display:flex;flex-direction:column;}
+.course-card:hover{transform:translateY(-8px);box-shadow:0 24px 60px rgba(44,24,16,0.12);border-color:var(--rose-light);}
+.cc-visual{height:160px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;}
+.cc-badge{position:absolute;top:1rem;left:1rem;font-size:0.62rem;font-weight:600;letter-spacing:0.08em;padding:0.3rem 0.75rem;border-radius:20px;}
+.badge-popular{background:#FEF3C7;color:#92400E;}
+.badge-offer{background:#FEE2E2;color:#991B1B;}
+.badge-new{background:#D1FAE5;color:#065F46;}
+.cc-format{position:absolute;top:1rem;right:1rem;font-size:0.6rem;font-weight:600;padding:0.25rem 0.65rem;border-radius:12px;}
+.fmt-live{background:#D1FAE5;color:#065F46;}
+.fmt-rec{background:#EDE9FE;color:#4C1D95;}
+.cc-body{padding:1.5rem;flex:1;display:flex;flex-direction:column;}
+.cc-body h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:0.4rem;}
+.cc-body p{font-size:0.83rem;color:var(--muted);line-height:1.75;margin-bottom:1rem;flex:1;}
+.cc-meta{display:flex;gap:1rem;margin-bottom:1rem;font-size:0.74rem;color:var(--light-muted);}
+.cc-footer{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--border);}
+.cc-price-main{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--rose);}
+.cc-price-orig{font-size:0.78rem;color:var(--light-muted);text-decoration:line-through;display:block;}
+.cc-btn{background:var(--rose);color:white;border:none;padding:0.55rem 1.2rem;border-radius:4px;font-size:0.75rem;font-weight:500;cursor:pointer;transition:all 0.3s;}
+.cc-btn:hover{background:var(--rose-light);}
+
+.classplus-bar{background:linear-gradient(135deg,#1a1040 0%,#0d1b3e 100%);border-radius:12px;padding:3rem;margin-top:4rem;display:flex;gap:3rem;align-items:center;flex-wrap:wrap;}
+.cp-text h3{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:400;color:white;margin-bottom:0.7rem;}
+.cp-text h3 span{color:#6BA8FF;}
+.cp-text p{font-size:0.87rem;color:rgba(255,255,255,0.55);line-height:1.8;max-width:460px;}
+.cp-features{display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:1.2rem;}
+.cp-feat{background:rgba(255,255,255,0.07);border:1px solid rgba(107,168,255,0.2);padding:0.55rem 1rem;border-radius:6px;font-size:0.8rem;color:rgba(255,255,255,0.7);}
+.btn-blue{display:inline-block;background:#4D8CFF;color:white;padding:0.85rem 2rem;font-size:0.8rem;font-weight:500;text-decoration:none;border-radius:4px;transition:all 0.3s;flex-shrink:0;}
+.btn-blue:hover{background:#6BA8FF;transform:translateY(-2px);}
+
+.modal-bg{display:none;position:fixed;inset:0;z-index:9999;background:rgba(44,24,16,0.6);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:2rem;}
+.modal-bg.open{display:flex;}
+.modal{background:white;border-radius:16px;width:100%;max-width:500px;max-height:88vh;overflow-y:auto;box-shadow:0 40px 100px rgba(44,24,16,0.25);}
+.modal-head{padding:2rem 2rem 1.5rem;border-bottom:1px solid var(--border);position:relative;}
+.modal-head h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--text);}
+.modal-head p{font-size:0.83rem;color:var(--muted);margin-top:0.3rem;}
+.modal-x{position:absolute;top:1.5rem;right:1.5rem;background:var(--blush);border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;color:var(--muted);display:flex;align-items:center;justify-content:center;}
+.modal-body{padding:2rem;}
+.modal-price-big{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:var(--rose);margin:1rem 0;}
+.modal-note{background:var(--blush);border-left:3px solid var(--rose);padding:1rem 1.2rem;font-size:0.82rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem;border-radius:0 6px 6px 0;}
+.modal-cta{display:block;width:100%;padding:1rem;background:var(--rose);color:white;border:none;border-radius:6px;font-size:0.85rem;font-weight:600;cursor:pointer;transition:background 0.3s;text-align:center;text-decoration:none;}
+.modal-cta:hover{background:var(--rose-light);}
+
+footer{background:#2C1810;padding:4rem 3rem 2rem;}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
+.f-logo{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--rose-light);display:block;margin-bottom:0.7rem;}
+.f-desc{font-size:0.82rem;color:rgba(255,255,255,0.35);line-height:1.9;}
+.f-socials{display:flex;gap:0.7rem;margin-top:1.2rem;}
+.f-soc{width:36px;height:36px;border:1px solid rgba(255,255,255,0.12);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.85rem;text-decoration:none;color:rgba(255,255,255,0.4);transition:all 0.3s;}
+.f-soc:hover{border-color:var(--rose-light);color:var(--rose-light);}
+.f-col h4{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--rose-light);margin-bottom:1rem;font-weight:600;}
+.f-col ul{list-style:none;}
+.f-col li{margin-bottom:0.5rem;}
+.f-col a{font-size:0.83rem;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.3s;}
+.f-col a:hover{color:var(--rose-light);}
+.f-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;font-size:0.75rem;color:rgba(255,255,255,0.2);}
+
+@media(max-width:900px){
+  nav{padding:0 1.5rem;}
+  .nav-links{display:none;position:absolute;top:68px;left:0;width:100%;background:rgba(255,250,247,0.98);flex-direction:column;padding:1rem 0;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .nav-links a{height:auto;padding:0.9rem 2rem;border:none;border-left:3px solid transparent;}
+  .nav-links a.active{border-left-color:var(--rose);background:var(--rose-pale);}
+  .hamburger{display:flex;}
+  .courses-main,.page-hero{padding:3rem 1.5rem 5rem;}
+  .page-hero{padding-top:7rem;}
+  .filter-bar{padding:0 1.5rem;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .classplus-bar{padding:2rem;}
+}
+@media(max-width:600px){
+  .courses-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">🌸 Sudha's Embroidery <small>Academy</small></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="courses.html" class="active">Courses</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html#enroll" class="nav-cta">Enroll Now</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> / Courses</div>
+  <h1>Our <em>Courses</em></h1>
+  <div class="hero-rule"></div>
+  <p>Choose from our range of hand embroidery courses — Aari, Zardoshi, Brooches, Tracing, and Jewellery Making. Available as live and recorded classes.</p>
+</div>
+
+<div class="filter-bar">
+  <div class="filter-inner">
+    <button class="filter-btn active" data-filter="all">All Courses</button>
+    <button class="filter-btn" data-filter="embroidery">Aari & Zardoshi</button>
+    <button class="filter-btn" data-filter="brooches">Brooches</button>
+    <button class="filter-btn" data-filter="special">Speciality</button>
+    <button class="filter-btn" data-filter="offer">🔥 Offers</button>
+  </div>
+</div>
+
+<div class="courses-main">
+
+  <!-- OFFER BANNER -->
+  <div class="offer-banner" data-cat="offer">
+    <div>
+      <span class="ob-tag">🔥 Limited Time Offer</span>
+      <h2>Basic Brooches Classes</h2>
+      <p>Start your brooch-making journey at an incredible price. Learn the basics of handcrafted embroidery brooches — perfect for beginners!</p>
+    </div>
+    <div class="ob-price">
+      <div class="ob-orig">₹999</div>
+      <div class="ob-main">₹399</div>
+      <div class="ob-save">You save ₹600!</div>
+      <button class="btn-primary" onclick="openModal('basic-brooches')">Grab This Offer</button>
+    </div>
+  </div>
+
+  <!-- ALL COURSES -->
+  <div class="cat-header" data-cat="embroidery"><h2>🪡 Aari & Zardoshi</h2><div class="cat-line"></div></div>
+  <div class="courses-grid" id="embroidery-grid"></div>
+
+  <div class="cat-header" data-cat="brooches"><h2>🌸 Brooches Classes</h2><div class="cat-line"></div></div>
+  <div class="courses-grid" id="brooches-grid"></div>
+
+  <div class="cat-header" data-cat="special"><h2>💎 Speciality Classes</h2><div class="cat-line"></div></div>
+  <div class="courses-grid" id="special-grid"></div>
+
+  <div class="cat-header" data-cat="foundation"><h2>✏️ Foundation Classes</h2><div class="cat-line"></div></div>
+  <div class="courses-grid" id="foundation-grid"></div>
+
+  <!-- CLASSPLUS -->
+  <div class="classplus-bar">
+    <div class="cp-text">
+      <h3>Courses on <span>ClassPlus</span></h3>
+      <p>After payment, receive your ClassPlus course link within 30 minutes. Watch HD lessons, download materials, and attend live sessions — all on mobile.</p>
+      <div class="cp-features">
+        <span class="cp-feat">📱 iOS & Android App</span>
+        <span class="cp-feat">🎥 HD Video Lessons</span>
+        <span class="cp-feat">🏆 Certificate</span>
+        <span class="cp-feat">💬 WhatsApp Support</span>
+      </div>
+    </div>
+    <a href="https://classplus.co" target="_blank" class="btn-blue">Learn About ClassPlus →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div><span class="f-logo">🌸 Sudha's Embroidery</span><p class="f-desc">Affordable, accessible hand embroidery education across India.</p>
+    <div class="f-socials"><a href="#" class="f-soc">f</a><a href="#" class="f-soc">📸</a><a href="#" class="f-soc">▶</a><a href="https://wa.me/918838798625" class="f-soc">💬</a></div></div>
+    <div class="f-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="courses.html">Courses</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="f-col"><h4>Courses</h4><ul><li><a href="#">Aari & Zardoshi</a></li><li><a href="#">Brooches Classes</a></li><li><a href="#">Tracing Classes</a></li><li><a href="#">Basic Brooches</a></li><li><a href="#">Jewellery Making</a></li></ul></div>
+    <div class="f-col"><h4>Contact</h4><ul><li><a href="tel:8838798625">📞 883 879 8625</a></li><li><a href="mailto:info@sudhasembroidery.com">✉ info@sudhasembroidery.com</a></li><li><a href="https://wa.me/918838798625">💬 WhatsApp</a></li></ul></div>
+  </div>
+  <div class="f-bottom"><span>© 2025 Sudha's Embroidery Academy</span><span>sudhasembroidery.in</span></div>
+</footer>
+
+<div class="modal-bg" id="modal">
+  <div class="modal">
+    <div class="modal-head"><h3 id="modal-title"></h3><p id="modal-sub"></p><button class="modal-x" onclick="closeModal()">✕</button></div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+const COURSES = [
+  {id:'aari-basic',emoji:'🪡',title:'Aari & Zardoshi — Basic & Advance',cat:'embroidery',badge:'Most Popular',badgeClass:'badge-popular',bg:'linear-gradient(135deg,#FDECEA,#FAD4D6)',price:'₹3,999',desc:'Complete Aari and Zardoshi embroidery — from first stitch to advanced patterns. Sarees, blouses, dupattas and more.',dur:'8 Weeks',lessons:'40 lessons',fmt:'both'},
+  {id:'brooches',emoji:'🌸',title:'Brooches Classes',cat:'brooches',badge:'Creative',badgeClass:'badge-new',bg:'linear-gradient(135deg,#FDE8F0,#F9D4E4)',price:'₹1,999',desc:'Create beautiful handcrafted embroidery brooches. Great for gifting, selling, or personal collection.',dur:'3 Weeks',lessons:'18 lessons',fmt:'recorded'},
+  {id:'basic-brooches',emoji:'🎀',title:'Basic Brooches Classes',cat:'brooches',badge:'🔥 Offer',badgeClass:'badge-offer',bg:'linear-gradient(135deg,#FEE2E2,#FDD8D8)',price:'₹399',origPrice:'₹999',desc:'Special offer on basic brooch making. Perfect entry-level course for complete beginners.',dur:'1 Week',lessons:'6 lessons',fmt:'recorded'},
+  {id:'jewellery',emoji:'💎',title:'Aari Jewellery Making',cat:'special',badge:'Unique',badgeClass:'badge-popular',bg:'linear-gradient(135deg,#EDE8FD,#D8D4F9)',price:'₹1,999',desc:'Create stunning Aari embroidery jewellery — earrings, necklaces, maang tikkas, and accessories.',dur:'4 Weeks',lessons:'24 lessons',fmt:'both'},
+  {id:'tracing',emoji:'✏️',title:'Tracing Classes',cat:'foundation',badge:'Foundation',badgeClass:'badge-new',bg:'linear-gradient(135deg,#FDF5DC,#F9EDD4)',price:'₹999',desc:'Master tracing embroidery patterns onto fabric. Essential skill for all embroidery work.',dur:'1 Week',lessons:'8 lessons',fmt:'recorded'},
+];
+
+const GRIDS = {embroidery:'embroidery-grid',brooches:'brooches-grid',special:'special-grid',foundation:'foundation-grid'};
+
+function renderCard(c){
+  return `<div class="course-card" data-cat="${c.cat}" onclick="openModal('${c.id}')">
+    <div class="cc-visual" style="background:${c.bg}">
+      ${c.emoji}
+      <span class="cc-badge ${c.badgeClass}">${c.badge}</span>
+      ${c.fmt==='both'?'<span class="cc-format fmt-live">Live & Recorded</span>':c.fmt==='live'?'<span class="cc-format fmt-live">🔴 Live</span>':'<span class="cc-format fmt-rec">⚫ Recorded</span>'}
+    </div>
+    <div class="cc-body">
+      <h3>${c.title}</h3>
+      <p>${c.desc}</p>
+      <div class="cc-meta"><span>⏱ ${c.dur}</span><span>📖 ${c.lessons}</span></div>
+      <div class="cc-footer">
+        <div>
+          ${c.origPrice?`<span class="cc-price-orig">${c.origPrice}</span>`:''}
+          <span class="cc-price-main">${c.price}</span>
+        </div>
+        <button class="cc-btn">Enroll →</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+COURSES.forEach(c => {
+  const g = document.getElementById(GRIDS[c.cat]);
+  if(g) g.innerHTML += renderCard(c);
+});
+
+// FILTER
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.course-card').forEach(c => {
+      c.style.display = (f==='all' || c.dataset.cat===f || f==='offer') ? '' : 'none';
+    });
+    document.querySelectorAll('.cat-header,.courses-grid').forEach(el => {
+      const cat = el.dataset.cat;
+      if(f==='all'){el.style.display='';}
+      else if(cat){ el.style.display = (cat===f||f==='offer') ? '' : 'none'; }
+    });
+    document.querySelector('.offer-banner').style.display = (f==='all'||f==='offer') ? '' : 'none';
+    if(f==='offer'){
+      document.querySelectorAll('.course-card').forEach(c => {
+        c.style.display = c.dataset.cat==='brooches' && c.querySelector('.badge-offer') ? '' : 'none';
+      });
+    }
+  });
+});
+
+const MODAL_DATA = {};
+COURSES.forEach(c => {
+  MODAL_DATA[c.id] = {
+    title: c.emoji+' '+c.title,
+    sub: c.dur+' · '+c.lessons,
+    body:`<p style="color:var(--muted);line-height:1.8;font-size:0.9rem">${c.desc}</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0">
+      <div style="background:var(--blush);padding:1rem;border-radius:8px;text-align:center"><div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:0.3rem">Duration</div><div style="font-family:'Playfair Display',serif;font-size:1.2rem">${c.dur}</div></div>
+      <div style="background:var(--blush);padding:1rem;border-radius:8px;text-align:center"><div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:0.3rem">Format</div><div style="font-family:'Playfair Display',serif;font-size:1.2rem">${c.fmt==='both'?'Live & Recorded':c.fmt==='live'?'🔴 Live':'⚫ Recorded'}</div></div>
+    </div>
+    ${c.origPrice?`<div style="display:flex;align-items:center;gap:0.8rem;margin-bottom:0.5rem"><span style="color:var(--light-muted);text-decoration:line-through">${c.origPrice}</span><span style="background:#FEE2E2;color:#991B1B;font-size:0.72rem;padding:0.2rem 0.6rem;border-radius:10px;font-weight:600">SPECIAL OFFER</span></div>`:''}
+    <div class="modal-price-big">${c.price}</div>
+    <div class="modal-note">📱 After payment, receive your ClassPlus access link on WhatsApp & email within 30 minutes.</div>
+    <a href="contact.html#enroll" class="modal-cta" onclick="closeModal()">Enroll in This Course →</a>`
+  };
+});
+function openModal(id){const m=MODAL_DATA[id];if(!m)return;document.getElementById('modal-title').textContent=m.title;document.getElementById('modal-sub').textContent=m.sub;document.getElementById('modal-body').innerHTML=m.body;document.getElementById('modal').classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('modal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeModal();});
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
+</script>
+</body>
+</html>
