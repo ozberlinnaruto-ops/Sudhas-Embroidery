@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embroidery Blog — Aari & Zardoshi Tips, Guides & Inspiration | Sudha's Embroidery</title>
+<meta name="description" content="Learn Aari embroidery, Zardoshi work, brooches making and jewellery crafting. Free tips, beginner guides, business advice in Tamil and English. Sudha's Embroidery Academy.">
+<meta name="keywords" content="aari embroidery, zardoshi, embroidery classes Tamil Nadu, aari work, embroidery business, brooches making, jewellery making embroidery">
+<link rel="canonical" href="https://sudhasembroidery.in/blog.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#C9626A;--rose-light:#E8939A;--rose-pale:#FAE8EA;--gold:#B8860B;--gold-pale:#FDF5DC;--blush:#F9EEE8;--warm-white:#FFFAF7;--silk:#F4EDE4;--text:#2C1810;--muted:#7A5C52;--light-muted:#B09890;--border:rgba(180,120,100,0.18);}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--warm-white);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden;}
+nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(255,250,247,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;}
+.nav-logo{font-family:'Playfair Display',serif;color:var(--rose);font-size:1.25rem;text-decoration:none;display:flex;align-items:center;gap:0.5rem;}
+.nav-logo small{font-family:'DM Sans',sans-serif;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);}
+.nav-links{display:flex;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.8rem;padding:0 1.1rem;height:68px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all 0.3s;}
+.nav-links a:hover{color:var(--rose);}
+.nav-links a.active{color:var(--rose);border-bottom-color:var(--rose);}
+.nav-cta{background:var(--rose)!important;color:white!important;padding:0.5rem 1.4rem!important;height:auto!important;border-radius:2px;font-weight:500!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:0;}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--rose);}
+
+/* PAGE HERO */
+.page-hero{padding:8rem 3rem 5rem;background:linear-gradient(145deg,#FFF5F0 0%,#FAE8EA 50%,#FDF5DC 100%);position:relative;overflow:hidden;}
+.page-hero::after{content:'✍️';position:absolute;right:8%;top:50%;transform:translateY(-50%);font-size:16rem;opacity:0.05;}
+.page-hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2;}
+.breadcrumb{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--light-muted);margin-bottom:1rem;}
+.breadcrumb a{color:var(--light-muted);text-decoration:none;}
+.breadcrumb a:hover{color:var(--rose);}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;color:var(--text);}
+.page-hero h1 em{font-style:italic;color:var(--rose);}
+.hero-rule{width:50px;height:2.5px;background:linear-gradient(to right,var(--rose),var(--gold));margin:1.2rem 0;border-radius:2px;}
+.page-hero p{color:var(--muted);font-size:1rem;max-width:580px;line-height:1.85;}
+
+/* FILTER TAGS */
+.filter-bar{background:white;border-bottom:1px solid var(--border);padding:0 3rem;position:sticky;top:68px;z-index:900;}
+.filter-inner{max-width:1200px;margin:0 auto;display:flex;gap:0.5rem;overflow-x:auto;scrollbar-width:none;padding:0.8rem 0;}
+.filter-inner::-webkit-scrollbar{display:none;}
+.tag-btn{padding:0.4rem 1rem;border-radius:20px;border:1.5px solid var(--border);background:white;font-size:0.78rem;font-weight:500;color:var(--muted);cursor:pointer;white-space:nowrap;transition:all 0.3s;}
+.tag-btn:hover{border-color:var(--rose);color:var(--rose);}
+.tag-btn.active{background:var(--rose);color:white;border-color:var(--rose);}
+
+/* BLOG LAYOUT */
+.blog-main{max-width:1200px;margin:0 auto;padding:4rem 3rem 6rem;display:grid;grid-template-columns:1fr 320px;gap:3rem;align-items:start;}
+
+/* BLOG GRID */
+.blog-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+.blog-card{background:white;border-radius:12px;border:1px solid var(--border);overflow:hidden;transition:all 0.4s;cursor:pointer;text-decoration:none;display:block;}
+.blog-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(44,24,16,0.1);border-color:var(--rose-light);}
+.blog-card.featured{grid-column:1/3;}
+.bc-visual{height:200px;display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;}
+.blog-card.featured .bc-visual{height:260px;font-size:5rem;}
+.bc-cat{position:absolute;top:1rem;left:1rem;font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:20px;}
+.bc-lang{position:absolute;top:1rem;right:1rem;font-size:0.65rem;padding:0.25rem 0.65rem;border-radius:12px;font-weight:600;}
+.lang-both{background:#EDE9FE;color:#4C1D95;}
+.lang-en{background:#D1FAE5;color:#065F46;}
+.lang-ta{background:#FEF3C7;color:#92400E;}
+.cat-aari{background:#FAE8EA;color:#9B2C34;}
+.cat-zardoshi{background:#EDE9FE;color:#4C1D95;}
+.cat-business{background:#D1FAE5;color:#065F46;}
+.cat-beginner{background:#FEF3C7;color:#92400E;}
+.cat-brooches{background:#FCE7F3;color:#9D174D;}
+.bc-body{padding:1.5rem;}
+.bc-body h2{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;line-height:1.35;}
+.blog-card.featured .bc-body h2{font-size:1.5rem;}
+.bc-body .ta-title{font-size:0.88rem;color:var(--muted);font-style:italic;margin-bottom:0.6rem;line-height:1.5;}
+.bc-body p{font-size:0.83rem;color:var(--muted);line-height:1.75;margin-bottom:1rem;}
+.bc-meta{display:flex;align-items:center;justify-content:space-between;font-size:0.73rem;color:var(--light-muted);}
+.bc-read{color:var(--rose);font-weight:600;font-size:0.78rem;}
+
+/* SIDEBAR */
+.sidebar{display:flex;flex-direction:column;gap:2rem;}
+.sidebar-card{background:white;border-radius:12px;border:1px solid var(--border);padding:1.5rem;}
+.sidebar-card h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:1px solid var(--border);}
+.popular-list{display:flex;flex-direction:column;gap:0.8rem;}
+.pop-item{display:flex;gap:0.8rem;align-items:flex-start;text-decoration:none;}
+.pop-item:hover .pop-title{color:var(--rose);}
+.pop-num{width:24px;height:24px;background:var(--rose-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;color:var(--rose);flex-shrink:0;margin-top:2px;}
+.pop-title{font-size:0.83rem;color:var(--text);line-height:1.5;transition:color 0.3s;}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:0.5rem;}
+.cloud-tag{background:var(--blush);border:1px solid var(--border);border-radius:20px;padding:0.3rem 0.8rem;font-size:0.75rem;color:var(--muted);text-decoration:none;transition:all 0.3s;}
+.cloud-tag:hover{background:var(--rose-pale);border-color:var(--rose);color:var(--rose);}
+.cta-sidebar{background:linear-gradient(135deg,var(--rose),#A0464E);padding:2rem;border-radius:12px;text-align:center;}
+.cta-sidebar h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:white;margin-bottom:0.5rem;}
+.cta-sidebar p{font-size:0.8rem;color:rgba(255,255,255,0.75);line-height:1.7;margin-bottom:1.2rem;}
+.btn-white-sm{display:inline-block;background:white;color:var(--rose);padding:0.6rem 1.4rem;border-radius:4px;font-size:0.8rem;font-weight:600;text-decoration:none;transition:all 0.3s;}
+.btn-white-sm:hover{background:var(--rose-pale);}
+
+/* ARTICLE MODAL */
+.article-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(44,24,16,0.65);backdrop-filter:blur(6px);overflow-y:auto;padding:2rem;}
+.article-overlay.open{display:block;}
+.article-modal{background:white;max-width:760px;margin:0 auto;border-radius:16px;overflow:hidden;box-shadow:0 40px 100px rgba(44,24,16,0.2);}
+.article-header{padding:2.5rem 3rem 2rem;position:relative;}
+.article-close{position:absolute;top:1.5rem;right:1.5rem;width:36px;height:36px;background:var(--blush);border:none;border-radius:50%;cursor:pointer;font-size:1.1rem;color:var(--muted);display:flex;align-items:center;justify-content:center;}
+.article-cat-badge{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:20px;margin-bottom:1rem;}
+.article-header h1{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;color:var(--text);line-height:1.3;margin-bottom:0.5rem;}
+.article-ta-title{font-style:italic;color:var(--muted);font-size:1rem;margin-bottom:1rem;}
+.article-meta{font-size:0.75rem;color:var(--light-muted);display:flex;gap:1.5rem;flex-wrap:wrap;}
+.article-body{padding:0 3rem 3rem;}
+.article-body h2{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--text);margin:2rem 0 0.8rem;}
+.article-body h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--rose);margin:1.5rem 0 0.6rem;}
+.article-body p{font-size:0.93rem;color:var(--muted);line-height:1.95;margin-bottom:1rem;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1rem;}
+.article-body li{font-size:0.92rem;color:var(--muted);line-height:1.9;margin-bottom:0.3rem;}
+.article-body .highlight-box{background:var(--blush);border-left:3px solid var(--rose);padding:1rem 1.5rem;border-radius:0 8px 8px 0;margin:1.5rem 0;font-size:0.9rem;color:var(--text);line-height:1.8;}
+.article-body .ta-section{background:var(--gold-pale);border-left:3px solid var(--gold);padding:1rem 1.5rem;border-radius:0 8px 8px 0;margin:1.5rem 0;}
+.article-body .ta-section h4{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);margin-bottom:0.5rem;}
+.article-body .ta-section p{color:var(--text);font-size:0.9rem;}
+.article-cta{background:linear-gradient(135deg,var(--rose),#A0464E);padding:2rem 3rem;text-align:center;}
+.article-cta h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:white;margin-bottom:0.5rem;}
+.article-cta p{color:rgba(255,255,255,0.75);font-size:0.88rem;margin-bottom:1.2rem;}
+.btn-white{display:inline-block;background:white;color:var(--rose);padding:0.75rem 2rem;border-radius:4px;font-weight:600;text-decoration:none;font-size:0.85rem;}
+
+/* FOOTER */
+footer{background:#2C1810;padding:4rem 3rem 2rem;}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
+.f-logo{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--rose-light);display:block;margin-bottom:0.7rem;}
+.f-desc{font-size:0.82rem;color:rgba(255,255,255,0.35);line-height:1.9;}
+.f-socials{display:flex;gap:0.7rem;margin-top:1.2rem;}
+.f-soc{width:36px;height:36px;border:1px solid rgba(255,255,255,0.12);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.85rem;text-decoration:none;color:rgba(255,255,255,0.4);transition:all 0.3s;}
+.f-soc:hover{border-color:var(--rose-light);color:var(--rose-light);}
+.f-col h4{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--rose-light);margin-bottom:1rem;font-weight:600;}
+.f-col ul{list-style:none;}
+.f-col li{margin-bottom:0.5rem;}
+.f-col a{font-size:0.83rem;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.3s;}
+.f-col a:hover{color:var(--rose-light);}
+.f-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;font-size:0.75rem;color:rgba(255,255,255,0.2);}
+
+@media(max-width:1000px){.blog-main{grid-template-columns:1fr;}.sidebar{grid-row:1;}}
+@media(max-width:900px){
+  nav{padding:0 1.5rem;}
+  .nav-links{display:none;position:absolute;top:68px;left:0;width:100%;background:rgba(255,250,247,0.98);flex-direction:column;padding:1rem 0;border-bottom:1px solid var(--border);}
+  .nav-links.open{display:flex;}
+  .nav-links a{height:auto;padding:0.9rem 2rem;border:none;border-left:3px solid transparent;}
+  .nav-links a.active{border-left-color:var(--rose);background:var(--rose-pale);}
+  .hamburger{display:flex;}
+  .page-hero,.blog-main{padding-left:1.5rem;padding-right:1.5rem;}
+  .filter-bar{padding:0 1.5rem;}
+  .blog-grid{grid-template-columns:1fr;}
+  .blog-card.featured{grid-column:1;}
+  .article-header,.article-body{padding-left:1.5rem;padding-right:1.5rem;}
+  .article-cta{padding:1.5rem;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:600px){.footer-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">🌸 Sudha's Embroidery <small>Academy</small></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html#enroll" class="nav-cta">Enroll Now</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Blog</div>
+    <h1>Embroidery <em>Blog</em> &amp; Guides</h1>
+    <div class="hero-rule"></div>
+    <p>Free tips, beginner guides, business advice and inspiration for Aari embroidery, Zardoshi, brooches and jewellery making — in Tamil &amp; English.</p>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <div class="filter-inner">
+    <button class="tag-btn active" data-cat="all">All Articles</button>
+    <button class="tag-btn" data-cat="beginner">For Beginners</button>
+    <button class="tag-btn" data-cat="aari">Aari Embroidery</button>
+    <button class="tag-btn" data-cat="zardoshi">Zardoshi</button>
+    <button class="tag-btn" data-cat="brooches">Brooches</button>
+    <button class="tag-btn" data-cat="business">Business & Earning</button>
+  </div>
+</div>
+
+<div class="blog-main">
+  <!-- ARTICLES -->
+  <div>
+    <div class="blog-grid" id="blogGrid"></div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="cta-sidebar">
+      <h3>Ready to Learn?</h3>
+      <p>Join 500+ students who learned Aari & Zardoshi with Sudha ma'am. Courses from ₹399!</p>
+      <a href="courses.html" class="btn-white-sm">View Courses →</a>
+    </div>
+    <div class="sidebar-card">
+      <h3>Popular Articles</h3>
+      <div class="popular-list" id="popularList"></div>
+    </div>
+    <div class="sidebar-card">
+      <h3>Topics</h3>
+      <div class="tag-cloud">
+        <a href="#" class="cloud-tag" onclick="filterCat('aari')">Aari Embroidery</a>
+        <a href="#" class="cloud-tag" onclick="filterCat('zardoshi')">Zardoshi</a>
+        <a href="#" class="cloud-tag" onclick="filterCat('beginner')">Beginners</a>
+        <a href="#" class="cloud-tag" onclick="filterCat('business')">Business</a>
+        <a href="#" class="cloud-tag" onclick="filterCat('brooches')">Brooches</a>
+        <a href="#" class="cloud-tag">Tamil Nadu</a>
+        <a href="#" class="cloud-tag">Online Classes</a>
+        <a href="#" class="cloud-tag">Jewellery Making</a>
+        <a href="#" class="cloud-tag">Earn from Home</a>
+      </div>
+    </div>
+    <div class="sidebar-card">
+      <h3>Our Courses</h3>
+      <div style="display:flex;flex-direction:column;gap:0.7rem;">
+        <a href="aari-course.html" style="display:flex;justify-content:space-between;text-decoration:none;font-size:0.83rem;color:var(--text);padding:0.5rem 0;border-bottom:1px solid var(--border);">Aari & Zardoshi Basic <span style="color:var(--rose);font-weight:600;">₹3,999</span></a>
+        <a href="brooches-course.html" style="display:flex;justify-content:space-between;text-decoration:none;font-size:0.83rem;color:var(--text);padding:0.5rem 0;border-bottom:1px solid var(--border);">Brooches Classes <span style="color:var(--rose);font-weight:600;">₹1,999</span></a>
+        <a href="tracing-course.html" style="display:flex;justify-content:space-between;text-decoration:none;font-size:0.83rem;color:var(--text);padding:0.5rem 0;border-bottom:1px solid var(--border);">Tracing Classes <span style="color:var(--rose);font-weight:600;">₹999</span></a>
+        <a href="basic-brooches-course.html" style="display:flex;justify-content:space-between;text-decoration:none;font-size:0.83rem;color:var(--text);padding:0.5rem 0;border-bottom:1px solid var(--border);">Basic Brooches <span style="color:#16a34a;font-weight:600;">₹399 🔥</span></a>
+        <a href="jewellery-course.html" style="display:flex;justify-content:space-between;text-decoration:none;font-size:0.83rem;color:var(--text);padding:0.5rem 0;">Aari Jewellery Making <span style="color:var(--rose);font-weight:600;">₹1,999</span></a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- ARTICLE MODAL -->
+<div class="article-overlay" id="articleOverlay">
+  <div class="article-modal">
+    <div class="article-header">
+      <button class="article-close" onclick="closeArticle()">✕</button>
+      <div id="art-badge" class="article-cat-badge"></div>
+      <h1 id="art-title"></h1>
+      <p id="art-ta-title" class="article-ta-title"></p>
+      <div class="article-meta" id="art-meta"></div>
+    </div>
+    <div class="article-body" id="art-body"></div>
+    <div class="article-cta">
+      <h3>Ready to Start Learning?</h3>
+      <p>Join Sudha's Embroidery Academy — courses from ₹399. Live &amp; recorded classes available.</p>
+      <a href="courses.html" class="btn-white">View All Courses →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div><span class="f-logo">🌸 Sudha's Embroidery</span><p class="f-desc">Affordable Aari and Zardoshi embroidery education across India.</p>
+    <div class="f-socials"><a href="#" class="f-soc">f</a><a href="#" class="f-soc">📸</a><a href="#" class="f-soc">▶</a><a href="https://wa.me/918838798625" class="f-soc">💬</a></div></div>
+    <div class="f-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="courses.html">Courses</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="f-col"><h4>Courses</h4><ul><li><a href="aari-course.html">Aari & Zardoshi</a></li><li><a href="brooches-course.html">Brooches Classes</a></li><li><a href="tracing-course.html">Tracing Classes</a></li><li><a href="jewellery-course.html">Jewellery Making</a></li></ul></div>
+    <div class="f-col"><h4>Contact</h4><ul><li><a href="tel:8838798625">📞 883 879 8625</a></li><li><a href="mailto:info@sudhasembroidery.com">✉ info@sudhasembroidery.com</a></li><li><a href="https://wa.me/918838798625">💬 WhatsApp</a></li></ul></div>
+  </div>
+  <div class="f-bottom"><span>© 2025 Sudha's Embroidery Academy</span><span>sudhasembroidery.in</span></div>
+</footer>
+
+<script>
+// ══════════════════════════════════
+//  ARTICLES DATA
+// ══════════════════════════════════
+const ARTICLES = [
+  {
+    id:'aari-beginners-guide',
+    featured: true,
+    emoji:'🪡',
+    cat:'beginner',
+    catLabel:'For Beginners',
+    catClass:'cat-beginner',
+    lang:'both',
+    title:'Complete Beginner\'s Guide to Aari Embroidery',
+    taTitle:'ஆரி எம்பராய்டரி - முழுமையான தொடக்க வழிகாட்டி',
+    excerpt:'Everything you need to know before picking up your first Aari needle — tools, fabric, stitches and where to start.',
+    readTime:'8 min read',
+    date:'Jan 2025',
+    body:`
+      <h2>What is Aari Embroidery?</h2>
+      <p>Aari embroidery is a traditional Indian embroidery technique that uses a special hooked needle called an "aari" to create intricate chain stitch patterns on fabric. It is one of India's most celebrated textile arts, widely used in bridal wear, sarees, blouses, and home furnishings.</p>
+      <p>The word "Aari" comes from the hooked needle used to work the embroidery. Unlike regular hand embroidery, Aari work is done with the fabric stretched tightly on a frame, and the needle works from the top, hooking thread that is held beneath the fabric to create beautiful chain stitches.</p>
+
+      <div class="highlight-box">
+        💡 <strong>Key fact:</strong> Aari embroidery is also known as "Tambour embroidery" in other parts of the world. In India, it is most associated with the Kashmir, Gujarat, and Tamil Nadu embroidery traditions.
+      </div>
+
+      <h2>Tools You Need to Get Started</h2>
+      <ul>
+        <li><strong>Aari needle</strong> — the hooked needle, available in different sizes</li>
+        <li><strong>Embroidery frame / tambour frame</strong> — keeps fabric stretched tightly</li>
+        <li><strong>Fabric</strong> — cotton, silk, or georgette work best for beginners</li>
+        <li><strong>Thread</strong> — silk thread, zari thread, or regular embroidery floss</li>
+        <li><strong>Tracing paper & carbon paper</strong> — for transferring patterns</li>
+        <li><strong>Thimble</strong> — to protect your finger while pushing the needle</li>
+      </ul>
+
+      <h2>Is Aari Embroidery Difficult to Learn?</h2>
+      <p>Aari embroidery has a learning curve — particularly mastering the chain stitch motion — but with proper guidance it can be picked up within days. Most beginners create their first complete design within 2–3 weeks of starting.</p>
+      <p>The key is learning the correct needle angle and thread tension. Once these clicks, the rest follows naturally.</p>
+
+      <div class="ta-section">
+        <h4>🌸 Tamil — தமிழில்</h4>
+        <p>ஆரி எம்பராய்டரி கற்றுக்கொள்வது கடினமா? இல்லை! சரியான வழிகாட்டுதலுடன் 2-3 வாரங்களில் உங்கள் முதல் டிசைன் செய்யலாம். தேவையான கருவிகள்: ஆரி ஊசி, எம்பராய்டரி ஃப்ரேம், துணி மற்றும் நூல். சுதா மா'ம் வகுப்புகளில் தமிழிலும் கற்றுக்கொள்ளலாம்!</p>
+      </div>
+
+      <h2>Your First 3 Stitches to Learn</h2>
+      <ol>
+        <li><strong>Basic chain stitch</strong> — the foundation of all Aari work</li>
+        <li><strong>Filling stitch</strong> — used to fill motifs and patterns</li>
+        <li><strong>Outline stitch</strong> — for borders and design edges</li>
+      </ol>
+
+      <h2>How Long Does It Take to Learn?</h2>
+      <p>With dedicated practice:</p>
+      <ul>
+        <li><strong>1 week</strong> — Master the basic chain stitch</li>
+        <li><strong>2–3 weeks</strong> — Complete your first small design</li>
+        <li><strong>1–2 months</strong> — Work on saree borders and blouse patterns</li>
+        <li><strong>3–6 months</strong> — Professional-grade work for clients</li>
+      </ul>
+
+      <h2>Can I Learn Online?</h2>
+      <p>Absolutely! Online Aari embroidery classes are ideal because you can watch demonstrations repeatedly, pause and practice, and learn at your own pace. Sudha's Embroidery Academy offers both live interactive classes and self-paced recorded courses — all accessible via the ClassPlus mobile app.</p>
+    `
+  },
+  {
+    id:'aari-vs-zardoshi',
+    emoji:'⚖️',
+    cat:'aari',
+    catLabel:'Aari Embroidery',
+    catClass:'cat-aari',
+    lang:'both',
+    title:'Aari vs Zardoshi — What\'s the Difference?',
+    taTitle:'ஆரி vs ஜர்தோஷி — என்ன வித்தியாசம்?',
+    excerpt:'Confused between Aari and Zardoshi embroidery? Here\'s a clear, honest comparison to help you choose which to learn first.',
+    readTime:'5 min read',
+    date:'Feb 2025',
+    body:`
+      <h2>The Key Differences</h2>
+      <p>Aari and Zardoshi are both beautiful Indian embroidery traditions, but they are quite different in their techniques, materials, and applications.</p>
+
+      <h3>Aari Embroidery</h3>
+      <ul>
+        <li>Uses a hooked needle to create chain stitches</li>
+        <li>Works with silk, cotton, and synthetic threads</li>
+        <li>Creates delicate, flowing patterns</li>
+        <li>Used on sarees, blouses, dupattas, home furnishings</li>
+        <li>Easier to learn for beginners</li>
+        <li>Less expensive materials</li>
+      </ul>
+
+      <h3>Zardoshi Embroidery</h3>
+      <ul>
+        <li>Uses gold and silver threads, wires, beads, sequins</li>
+        <li>Creates opulent, three-dimensional embellishments</li>
+        <li>Synonymous with Indian bridal and couture wear</li>
+        <li>More complex techniques — Dabka, Bullion, Sitara</li>
+        <li>Higher material cost</li>
+        <li>Premium earning potential</li>
+      </ul>
+
+      <div class="highlight-box">
+        🌸 <strong>Our recommendation:</strong> Learn Aari first to master needle control and stitch fundamentals, then progress to Zardoshi. Our combined Basic & Advance course covers both!
+      </div>
+
+      <div class="ta-section">
+        <h4>🌸 Tamil — தமிழில்</h4>
+        <p>ஆரி எம்பராய்டரி - சங்கிலி தையல் முறை, எளிமையான நூல்கள். ஜர்தோஷி - தங்க, வெள்ளி நூல்கள், திருமண உடைகளுக்கு பயன்படுத்தப்படும். தொடக்கத்தில் ஆரி கற்றுக்கொண்டு பிறகு ஜர்தோஷிக்கு செல்வது சிறந்தது!</p>
+      </div>
+
+      <h2>Which Earns More?</h2>
+      <p>Zardoshi work commands higher prices due to material costs and complexity — a single bridal lehenga can earn ₹5,000–₹50,000+ in embroidery fees. However, Aari work has higher volume demand for everyday wear and home furnishings.</p>
+    `
+  },
+  {
+    id:'earn-from-embroidery',
+    emoji:'💰',
+    cat:'business',
+    catLabel:'Business & Earning',
+    catClass:'cat-business',
+    lang:'both',
+    title:'How to Earn Money from Embroidery in India — Complete Guide',
+    taTitle:'எம்பராய்டரியில் இருந்து பணம் சம்பாதிப்பது எப்படி?',
+    excerpt:'Turn your embroidery skill into a real income. Sell online, take orders, teach classes — practical strategies that work in 2025.',
+    readTime:'10 min read',
+    date:'Mar 2025',
+    body:`
+      <h2>Can You Really Earn from Embroidery?</h2>
+      <p>Yes — and many of our students do. Embroidery offers multiple income streams, from taking custom orders to teaching others. The key is building skill first, then marketing smartly.</p>
+
+      <h2>5 Ways to Earn from Embroidery</h2>
+
+      <h3>1. Custom Embroidery Orders</h3>
+      <p>Take orders from individuals, boutiques, and fashion designers for embroidered blouses, saree borders, lehengas, and home furnishings. Rates range from ₹500 to ₹10,000+ per piece depending on complexity.</p>
+
+      <h3>2. Sell Embroidered Products Online</h3>
+      <p>Platforms like Etsy, Amazon Handmade, Meesho, and Instagram shop allow you to sell handmade embroidery products. Embroidered blouses, dupattas, and cushion covers sell well.</p>
+
+      <h3>3. Embroidery Jewellery Business</h3>
+      <p>Aari embroidery jewellery — earrings, necklaces, maang tikkas — is a booming niche. A pair of embroidered earrings costs ₹50–₹100 to make and sells for ₹300–₹1,500. Margins are excellent.</p>
+
+      <h3>4. Teach Embroidery</h3>
+      <p>Once you reach an intermediate level, you can teach beginners — in person or online via WhatsApp groups, YouTube, or platforms like ClassPlus. Our Professional course trains you for this path.</p>
+
+      <h3>5. Sell Embroidery Brooches</h3>
+      <p>Handmade brooches are popular gift items, especially during festivals. A well-made brooch costs ₹30–₹80 in materials and retails for ₹200–₹800.</p>
+
+      <div class="highlight-box">
+        💡 <strong>Real earning potential:</strong> A skilled Aari embroiderer working from home can earn ₹8,000–₹25,000 per month with consistent orders and good marketing.
+      </div>
+
+      <div class="ta-section">
+        <h4>🌸 Tamil — தமிழில்</h4>
+        <p>எம்பராய்டரி மூலம் வீட்டிலிருந்தே பணம் சம்பாதிக்கலாம்! Custom orders, online selling, jewellery making, கற்றுக்கொடுத்தல் - இப்படி பல வழிகளில் மாதம் ₹8,000 - ₹25,000 சம்பாதிக்கலாம். முதலில் skill கற்றுக்கொள்வது மிக முக்கியம்.</p>
+      </div>
+
+      <h2>How to Get Your First Order</h2>
+      <ol>
+        <li>Share your work on Instagram and WhatsApp status daily</li>
+        <li>Offer a discounted first piece to 2–3 friends for portfolio photos</li>
+        <li>Join local ladies groups and WhatsApp communities</li>
+        <li>List on Meesho or Instagram Shop</li>
+        <li>Collaborate with local boutiques — offer revenue sharing</li>
+      </ol>
+    `
+  },
+  {
+    id:'brooches-guide',
+    emoji:'🌸',
+    cat:'brooches',
+    catLabel:'Brooches',
+    catClass:'cat-brooches',
+    lang:'both',
+    title:'How to Make Embroidery Brooches at Home — Step by Step',
+    taTitle:'வீட்டிலேயே எம்பராய்டரி பிரோச் செய்வது எப்படி?',
+    excerpt:'A complete beginner guide to making beautiful handcrafted embroidery brooches — materials, techniques, and selling tips.',
+    readTime:'6 min read',
+    date:'Mar 2025',
+    body:`
+      <h2>What Are Embroidery Brooches?</h2>
+      <p>Embroidery brooches are small decorative pins made using embroidery techniques on fabric or felt, finished with a brooch pin backing. They are worn on sarees, blouses, bags, and jackets — and make wonderful gifts.</p>
+
+      <h2>Materials You Need</h2>
+      <ul>
+        <li>Felt fabric or cotton fabric (base)</li>
+        <li>Embroidery thread — silk or DMC</li>
+        <li>Embroidery needle and small hoop</li>
+        <li>Brooch pin backing (available on Amazon/craft stores)</li>
+        <li>Strong adhesive / fabric glue</li>
+        <li>Scissors and pencil for tracing</li>
+      </ul>
+
+      <h2>Basic Brooch Steps</h2>
+      <ol>
+        <li>Trace your chosen design onto felt using pencil</li>
+        <li>Stretch fabric in a small embroidery hoop</li>
+        <li>Embroider the design using satin stitch, chain stitch, or French knots</li>
+        <li>Cut the felt around the design leaving a 2–3mm border</li>
+        <li>Glue a second piece of felt to the back for neatness</li>
+        <li>Attach the brooch pin with fabric glue or by hand-stitching</li>
+        <li>Let dry completely — your brooch is ready!</li>
+      </ol>
+
+      <div class="highlight-box">
+        🎀 <strong>Selling tip:</strong> Package brooches in small gift boxes with tissue paper. A ₹60 brooch in a nice box sells for ₹350–₹500 easily online or at local exhibitions.
+      </div>
+
+      <div class="ta-section">
+        <h4>🌸 Tamil — தமிழில்</h4>
+        <p>பிரோச் செய்வது மிகவும் எளிது! Felt துணி, எம்பராய்டரி நூல், brooch pin - இவை மட்டும் போதும். ₹30-50 செலவில் செய்த பிரோச்சை ₹300-500க்கு விற்கலாம். எங்கள் Basic Brooches Course வெறும் ₹399-ல் கிடைக்கிறது!</p>
+      </div>
+
+      <h2>Most Popular Brooch Designs</h2>
+      <ul>
+        <li>Flower motifs (roses, lotuses, jasmine)</li>
+        <li>Peacock feather designs</li>
+        <li>Initial letter brooches</li>
+        <li>Butterfly patterns</li>
+        <li>Festival-themed designs (Diwali lamps, Christmas trees)</li>
+      </ul>
+    `
+  },
+  {
+    id:'zardoshi-beginners',
+    emoji:'✨',
+    cat:'zardoshi',
+    catLabel:'Zardoshi',
+    catClass:'cat-zardoshi',
+    lang:'both',
+    title:'Zardoshi Embroidery for Beginners — What You Need to Know',
+    taTitle:'ஜர்தோஷி எம்பராய்டரி - தொடக்கக்காரர்களுக்கான முழு வழிகாட்டி',
+    excerpt:'Everything about Zardoshi goldwork — history, materials, stitches, and how to get started with this beautiful art form.',
+    readTime:'7 min read',
+    date:'Feb 2025',
+    body:`
+      <h2>What is Zardoshi?</h2>
+      <p>Zardoshi (also spelled Zardozi) is a form of heavy and elaborate metal embroidery that originated in Persia and was brought to India during the Mughal era. The word "Zari" means gold in Persian, and "Doshi" means embroidery.</p>
+      <p>Today, Zardoshi is synonymous with Indian bridal couture — the dazzling gold and silver thread work seen on lehengas, sherwanis, and sarees at weddings across India.</p>
+
+      <h2>Types of Zardoshi Stitches</h2>
+
+      <h3>Dabka</h3>
+      <p>A spring-like metallic wire coiled over a cord, creating a raised, textured line stitch. The most recognisable Zardoshi stitch.</p>
+
+      <h3>Bullion</h3>
+      <p>Small coiled metallic wire used to fill areas and create textured patterns. Gives a three-dimensional, raised effect.</p>
+
+      <h3>Sitara (Stars)</h3>
+      <p>Small metallic sequin-like discs stitched flat onto fabric to create sparkle and shimmer effects.</p>
+
+      <h3>Salma</h3>
+      <p>Twisted metallic wire used for outlining and decorative lines in designs.</p>
+
+      <div class="highlight-box">
+        ✨ <strong>Important:</strong> Zardoshi materials — real gold and silver threads — can be expensive. Beginners can start with quality synthetic metallic threads which look beautiful and cost much less.
+      </div>
+
+      <div class="ta-section">
+        <h4>🌸 Tamil — தமிழில்</h4>
+        <p>ஜர்தோஷி என்பது தங்க, வெள்ளி நூல்களை பயன்படுத்தி செய்யும் சிறப்பான கலை. Mughal காலத்தில் தொடங்கிய இக்கலை இன்று திருமண உடைகளில் அதிகம் பயன்படுத்தப்படுகிறது. Dabka, Bullion, Sitara என்ற முறைகள் கற்றுக்கொண்டால் போதும்!</p>
+      </div>
+
+      <h2>What Can I Make with Zardoshi Skills?</h2>
+      <ul>
+        <li>Bridal lehenga borders and panels</li>
+        <li>Saree blouse embellishments</li>
+        <li>Sherwani yoke and collar work</li>
+        <li>Cushion covers and home décor</li>
+        <li>Purses and clutch bags</li>
+        <li>Jewellery and accessories</li>
+      </ul>
+    `
+  },
+  {
+    id:'online-embroidery-classes',
+    emoji:'💻',
+    cat:'beginner',
+    catLabel:'For Beginners',
+    catClass:'cat-beginner',
+    lang:'both',
+    title:'Online Embroidery Classes vs Offline — Which is Better in 2025?',
+    taTitle:'ஆன்லைன் vs ஆஃப்லைன் எம்பராய்டரி வகுப்பு — எது சிறந்தது?',
+    excerpt:'Honest comparison of learning embroidery online vs in-person classes. Which is more effective, affordable, and practical for you?',
+    readTime:'5 min read',
+    date:'Apr 2025',
+    body:`
+      <h2>Online vs Offline — The Honest Truth</h2>
+      <p>This is the most common question from students considering embroidery courses. The answer depends on your learning style, schedule, and budget — but here's our honest breakdown.</p>
+
+      <h2>Advantages of Online Classes</h2>
+      <ul>
+        <li>Learn from home — no travel time or cost</li>
+        <li>Watch lessons repeatedly at any time</li>
+        <li>More affordable than in-person courses</li>
+        <li>Access expert teachers regardless of your city</li>
+        <li>Recorded courses available 24/7</li>
+        <li>Community and support via WhatsApp groups</li>
+      </ul>
+
+      <h2>Advantages of Offline Classes</h2>
+      <ul>
+        <li>Immediate physical correction of technique</li>
+        <li>Hands-on guidance with materials</li>
+        <li>Social learning with fellow students</li>
+        <li>Some find it easier to stay motivated</li>
+      </ul>
+
+      <div class="highlight-box">
+        🏆 <strong>Our verdict:</strong> For 2025, online embroidery classes are equally effective as offline — especially when the course includes live interactive sessions. You save money, time, and can learn at your own pace.
+      </div>
+
+      <div class="ta-section">
+        <h4>🌸 Tamil — தமிழில்</h4>
+        <p>ஆன்லைன் வகுப்புகளில் வீட்டிலிருந்தே கற்றுக்கொள்ளலாம், பலமுறை பார்க்கலாம், கம்மி செலவில் கற்கலாம். சுதா மா'ம் வகுப்புகளில் Live Interactive மற்றும் Recorded இரண்டும் உள்ளன. ClassPlus app மூலம் mobile-ல் எங்கும் படிக்கலாம்!</p>
+      </div>
+
+      <h2>Sudha's Embroidery — Best of Both Worlds</h2>
+      <p>We offer both live interactive sessions (where you get real-time feedback from Sudha ma'am) and self-paced recorded courses. All delivered via ClassPlus with WhatsApp community support.</p>
+    `
+  },
+  {
+    id:'aari-jewellery-business',
+    emoji:'💎',
+    cat:'business',
+    catLabel:'Business & Earning',
+    catClass:'cat-business',
+    lang:'both',
+    title:'Aari Embroidery Jewellery Business — How to Start & Earn',
+    taTitle:'ஆரி ஜூவல்லரி வணிகம் — தொடங்குவது எப்படி?',
+    excerpt:'The complete guide to starting a profitable Aari jewellery business from home. Costs, pricing, where to sell, and how to grow.',
+    readTime:'8 min read',
+    date:'Apr 2025',
+    body:`
+      <h2>Why Aari Jewellery is a Great Business</h2>
+      <p>Aari embroidery jewellery — handcrafted earrings, necklaces, maang tikkas, and bracelets — is one of the fastest-growing niches in Indian handmade goods. Here's why:</p>
+      <ul>
+        <li>Low startup cost — under ₹2,000 to start</li>
+        <li>High demand — especially during festivals and weddings</li>
+        <li>Strong margins — 5x to 10x return on material cost</li>
+        <li>Easy to sell online via Instagram, Meesho, Etsy</li>
+        <li>Unique product — not mass produced, always in demand</li>
+      </ul>
+
+      <h2>Startup Costs</h2>
+      <ul>
+        <li>Basic materials (thread, hooks, findings): ₹500–₹1,000</li>
+        <li>Small tools: ₹300–₹500</li>
+        <li>Packaging (boxes, pouches): ₹300–₹500</li>
+        <li>Total startup: Under ₹2,000</li>
+      </ul>
+
+      <h2>Pricing Your Jewellery</h2>
+      <p>A simple rule: charge 5–8x your material cost as retail price.</p>
+      <ul>
+        <li>Earrings costing ₹30 in materials → sell at ₹200–₹350</li>
+        <li>Necklace costing ₹100 in materials → sell at ₹600–₹900</li>
+        <li>Maang tikka costing ₹60 → sell at ₹350–₹500</li>
+      </ul>
+
+      <div class="highlight-box">
+        💰 <strong>Income potential:</strong> Making and selling 30 pairs of earrings per week at ₹300 each = ₹9,000/week = ₹36,000/month — from home!
+      </div>
+
+      <div class="ta-section">
+        <h4>🌸 Tamil — தமிழில்</h4>
+        <p>ஆரி ஜூவல்லரி வணிகம் தொடங்க ₹2,000 மட்டுமே போதும்! வாரம் 30 pairs earrings செய்தால் மாதம் ₹36,000 வரை சம்பாதிக்கலாம். Instagram-ல் விற்கலாம், Meesho-ல் list செய்யலாம். எங்கள் Aari Jewellery Making course-ல் இதை தொடக்கம் முதல் கற்றுக்கொள்ளலாம்!</p>
+      </div>
+
+      <h2>Where to Sell</h2>
+      <ol>
+        <li><strong>Instagram</strong> — post reels showing making process, reach thousands</li>
+        <li><strong>Meesho</strong> — list products, they handle delivery</li>
+        <li><strong>WhatsApp groups</strong> — ladies groups, apartment communities</li>
+        <li><strong>Local exhibitions</strong> — craft fairs, temple festivals</li>
+        <li><strong>Boutiques</strong> — supply on consignment or wholesale</li>
+      </ol>
+    `
+  },
+  {
+    id:'tracing-patterns',
+    emoji:'✏️',
+    cat:'beginner',
+    catLabel:'For Beginners',
+    catClass:'cat-beginner',
+    lang:'both',
+    title:'How to Trace Embroidery Patterns onto Fabric — 4 Easy Methods',
+    taTitle:'துணியில் எம்பராய்டரி பேட்டர்ன் போடுவது எப்படி?',
+    excerpt:'Learn the 4 most reliable methods to transfer embroidery designs onto fabric — carbon paper, lightbox, water-soluble pen, and iron-on transfer.',
+    readTime:'5 min read',
+    date:'Jan 2025',
+    body:`
+      <h2>Why Tracing Skills Matter</h2>
+      <p>No matter how skilled you are at stitching, your finished embroidery will only be as good as your traced pattern. Good tracing = precise, beautiful results. Bad tracing = uneven, messy designs.</p>
+
+      <h2>Method 1 — Carbon Paper (Most Common)</h2>
+      <p>Place carbon paper (graphite side down) between your design and fabric. Trace over the design with a ball pen or stylus. Works on most light to medium fabrics.</p>
+      <ul>
+        <li>✅ Inexpensive and easy to find</li>
+        <li>✅ Works on most fabrics</li>
+        <li>⚠️ Marks may be permanent — test first</li>
+      </ul>
+
+      <h2>Method 2 — Water-Soluble Pen</h2>
+      <p>Draw directly onto fabric using a water-soluble marker. Marks wash out completely with water after embroidery is done.</p>
+      <ul>
+        <li>✅ Clean and precise</li>
+        <li>✅ Marks disappear completely</li>
+        <li>⚠️ Only works on light-coloured fabrics</li>
+      </ul>
+
+      <h2>Method 3 — Light Box / Window Tracing</h2>
+      <p>Tape your design to a window or lightbox, place fabric over it, and trace with fabric pen. The light shines through, making the design visible through the fabric.</p>
+
+      <h2>Method 4 — Iron-On Transfer</h2>
+      <p>Print design onto iron-on transfer paper, iron onto fabric face down. Fast and accurate for repeat patterns.</p>
+
+      <div class="highlight-box">
+        ✏️ <strong>Sudha's tip:</strong> For dark fabrics, use a white chalk pen or tailors chalk instead of regular carbon paper. Our Tracing Classes course covers all 4 methods in detail with practice sheets!
+      </div>
+
+      <div class="ta-section">
+        <h4>🌸 Tamil — தமிழில்</h4>
+        <p>துணியில் டிசைன் போடுவதற்கு 4 வழிகள் உள்ளன: Carbon paper, Water-soluble pen, Light box, Iron-on transfer. Dark colour துணிக்கு chalk pen பயன்படுத்தவும். எங்கள் Tracing Classes-ல் இவை அனைத்தையும் practice sheets-உடன் கற்றுக்கொள்ளலாம்!</p>
+      </div>
+    `
+  },
+];
+
+// ══════════════════════════════════
+//  RENDER CARDS
+// ══════════════════════════════════
+function renderCards(articles) {
+  const grid = document.getElementById('blogGrid');
+  grid.innerHTML = '';
+  articles.forEach(a => {
+    const card = document.createElement('a');
+    card.href = '#';
+    card.className = 'blog-card' + (a.featured ? ' featured' : '');
+    card.dataset.cat = a.cat;
+    card.addEventListener('click', e => { e.preventDefault(); openArticle(a.id); });
+
+    const bgs = {
+      beginner:'linear-gradient(135deg,#FEF3C7,#FDE8C8)',
+      aari:'linear-gradient(135deg,#FAE8EA,#F9D0D4)',
+      zardoshi:'linear-gradient(135deg,#EDE9FE,#DDD5FD)',
+      business:'linear-gradient(135deg,#D1FAE5,#C0F5D8)',
+      brooches:'linear-gradient(135deg,#FCE7F3,#F9D0E8)',
+    };
+
+    card.innerHTML = `
+      <div class="bc-visual" style="background:${bgs[a.cat]||bgs.beginner}">
+        ${a.emoji}
+        <span class="bc-cat ${a.catClass}">${a.catLabel}</span>
+        <span class="bc-lang ${a.lang==='both'?'lang-both':a.lang==='ta'?'lang-ta':'lang-en'}">${a.lang==='both'?'🌐 TM + EN':a.lang==='ta'?'🇮🇳 Tamil':'🇬🇧 English'}</span>
+      </div>
+      <div class="bc-body">
+        <h2>${a.title}</h2>
+        <p class="ta-title">${a.taTitle}</p>
+        <p>${a.excerpt}</p>
+        <div class="bc-meta">
+          <span>📅 ${a.date} · ⏱ ${a.readTime}</span>
+          <span class="bc-read">Read Article →</span>
+        </div>
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+
+// Popular list
+function renderPopular() {
+  const pop = document.getElementById('popularList');
+  ARTICLES.slice(0,5).forEach((a,i) => {
+    pop.innerHTML += `<a class="pop-item" href="#" onclick="event.preventDefault();openArticle('${a.id}')">
+      <div class="pop-num">${i+1}</div>
+      <div class="pop-title">${a.title}</div>
+    </a>`;
+  });
+}
+
+// Filter
+document.querySelectorAll('.tag-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    filterCat(cat);
+  });
+});
+
+function filterCat(cat) {
+  const filtered = cat === 'all' ? ARTICLES : ARTICLES.filter(a => a.cat === cat);
+  renderCards(filtered);
+  // update tag buttons
+  document.querySelectorAll('.tag-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.cat === cat || (cat==='all' && b.dataset.cat==='all'));
+  });
+}
+
+// ══════════════════════════════════
+//  ARTICLE MODAL
+// ══════════════════════════════════
+const CAT_COLORS = {
+  beginner:{bg:'#FEF3C7',color:'#92400E'},
+  aari:{bg:'#FAE8EA',color:'#9B2C34'},
+  zardoshi:{bg:'#EDE9FE',color:'#4C1D95'},
+  business:{bg:'#D1FAE5',color:'#065F46'},
+  brooches:{bg:'#FCE7F3',color:'#9D174D'},
+};
+
+function openArticle(id) {
+  const a = ARTICLES.find(x => x.id === id);
+  if (!a) return;
+  const c = CAT_COLORS[a.cat] || CAT_COLORS.beginner;
+  document.getElementById('art-badge').textContent = a.catLabel;
+  document.getElementById('art-badge').style.cssText = `background:${c.bg};color:${c.color};`;
+  document.getElementById('art-title').textContent = a.title;
+  document.getElementById('art-ta-title').textContent = a.taTitle;
+  document.getElementById('art-meta').innerHTML = `<span>📅 ${a.date}</span><span>⏱ ${a.readTime}</span><span>🌐 Tamil + English</span>`;
+  document.getElementById('art-body').innerHTML = a.body;
+  const overlay = document.getElementById('articleOverlay');
+  overlay.classList.add('open');
+  overlay.scrollTop = 0;
+  document.body.style.overflow = 'hidden';
+}
+
+function closeArticle() {
+  document.getElementById('articleOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('articleOverlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeArticle();
+});
+
+function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+
+// Init
+renderCards(ARTICLES);
+renderPopular();
+</script>
+</body>
+</html>
